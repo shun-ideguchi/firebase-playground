@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -14,5 +15,6 @@ func NewFirebaseHandler() IFirebaseHandler {
 }
 
 func (h *firebaseHandler) Authenticate(c *gin.Context) {
+	fmt.Println("Authenticate!")
 	c.JSON(http.StatusOK, gin.H{"message": "Authenticate"})
 }

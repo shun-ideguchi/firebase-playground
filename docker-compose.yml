@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  go:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+      - 2345:2345
+    tty: true
+    volumes:
+      - ./backend:/app
+    container_name: go-container
+    environment:
+      - GO_ENV=development
