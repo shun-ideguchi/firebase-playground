@@ -7,6 +7,7 @@ import { UserInfo } from './components/molecules/UserInfo'
 
 export const Home: FC = () => {
   const [user] = useAuthState(auth)
+  console.log(user)
 
   return (
     <div>
