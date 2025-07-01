@@ -14,7 +14,9 @@ type FirebaseGoogleMiddleware struct {
 	authClient *auth.Client
 }
 
-func NewFirebaseGoogleMiddleware(authClient *auth.Client) *FirebaseGoogleMiddleware {
+func NewFirebaseGoogleMiddleware(
+	authClient *auth.Client,
+) *FirebaseGoogleMiddleware {
 	return &FirebaseGoogleMiddleware{
 		authClient: authClient,
 	}

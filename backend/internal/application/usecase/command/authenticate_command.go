@@ -1,13 +1,11 @@
 package command
 
 type AuthenticateCommand struct {
-	Email    string
-	Password string
+	Email string
 }
 
-func NewAuthenticateCommand(email, password string) *AuthenticateCommand {
+func NewAuthenticateCommand(e string) *AuthenticateCommand {
 	return &AuthenticateCommand{
-		Email:    email,
-		Password: password,
+		Email: e,
 	}
 }
